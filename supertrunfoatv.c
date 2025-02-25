@@ -116,27 +116,30 @@ int main(){
         printf("carta2 ganhou. %.2f", carta2);
     }
     */
-    int opcao;
+    int opcao1, opcao2;
     printf("escolher atributo:\n");
     printf("1.populacao\n");
     printf("2.area\n");
     printf("3.pib\n");
     printf("4.turismo\n");
     printf("5.geral\n");
-    scanf("%d", &opcao);
-    switch(opcao){
+    scanf("%d", &opcao1);
+    switch(opcao1){
         case 1:
         const char *resultado1 =  (populacao1 > populacao2) ? "carta(2):populacao (2) ganhou\n" : "carta(1):populacao (1) ganhou\n";
-
+        printf("%s", resultado1);
         break;
         case 2:
         const char *resultado2 =  (area1 > area2) ? "carta:area (2) ganhou\n" : "carta(1):populacao (1) ganhou\n";
+        printf("%s", resultado2);
         break;
         case 3:
         const char *resultado3 =  (pib1 > pib2) ? "carta(2):pib (2) ganhou\n" : "carta(1):pib (1) ganhou\n";
+        printf("%s", resultado3);
         break;
         case 4:
         const char *resultado4 =  (num_turista1 > num_turista2) ? "carta(2):num_turista (2) ganhou\n" : "num_turista(1): (1) ganhou\n";
+        printf("%s", resultado4);
         break;
         case 5: 
             if(carta1 > carta2){
@@ -158,20 +161,56 @@ int main(){
     printf("3.pib\n");
     printf("4.turismo\n");
     printf("5.geral\n");
-    scanf("%d", &opcao);
-    switch(opcao){
+    scanf("%d", &opcao2);
+    if(opcao1 == opcao2){
+        printf("voce ja escolheu essa opcao!\n");
+    }else{
+        switch(opcao2){
+            case 1:
+            const char *resultado1 =  (populacao1 > populacao2) ? "carta(2):populacao (2) ganhou\n" : "carta(1):populacao (1) ganhou\n";
+            printf("%s", resultado1);
+            break;
+            case 2:
+            const char *resultado2 =  (area1 > area2) ? "carta:area (2) ganhou\n" : "carta(1):populacao (1) ganhou\n";
+            printf("%s", resultado2);
+            break;
+            case 3:
+            const char *resultado3 =  (pib1 > pib2) ? "carta(2):pib (2) ganhou\n" : "carta(1):pib (1) ganhou\n";
+            printf("%s", resultado3);
+            break;
+            case 4:
+            const char *resultado4 =  (num_turista1 > num_turista2) ? "carta(2):num_turista (2) ganhou\n" : "num_turista(1): (1) ganhou\n";
+            printf("%s", resultado4);
+            break;
+            case 5: 
+                if(carta1 > carta2){
+                printf("carta1 ganhou. %.2f", carta1);
+            }else if(carta1 == carta2){
+                printf("deu empate");
+            }else{
+                printf("carta2 ganhou. %.2f", carta2);
+            }
+            break;
+            default:
+            printf("invalido, escolha uma das opcoes acima!");
+        }
+    }
+   /* switch(opcao2){
         case 1:
         const char *resultado1 =  (populacao1 > populacao2) ? "carta(2):populacao (2) ganhou\n" : "carta(1):populacao (1) ganhou\n";
-
+        printf("%s", resultado1);
         break;
         case 2:
         const char *resultado2 =  (area1 > area2) ? "carta:area (2) ganhou\n" : "carta(1):populacao (1) ganhou\n";
+        printf("%s", resultado2);
         break;
         case 3:
         const char *resultado3 =  (pib1 > pib2) ? "carta(2):pib (2) ganhou\n" : "carta(1):pib (1) ganhou\n";
+        printf("%s", resultado3);
         break;
         case 4:
         const char *resultado4 =  (num_turista1 > num_turista2) ? "carta(2):num_turista (2) ganhou\n" : "num_turista(1): (1) ganhou\n";
+        printf("%s", resultado4);
         break;
         case 5: 
             if(carta1 > carta2){
@@ -184,7 +223,7 @@ int main(){
         break;
         default:
         printf("invalido, escolha uma das opcoes acima!");
-    }
+    }*/
     
 
     printf("resultado final:\n");
